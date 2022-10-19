@@ -1,0 +1,24 @@
+{
+  "name": "playkids/simple-response",
+  "description": "Simple Api Response Library",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Maycon Oliveira",
+      "email": "contato.maycon.ricardo@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "symfony/http-foundation": "^5.4",
+    "illuminate/http": "^8.83",
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mayconoliveira\\SimpleResponse\\" : "src/",
+      "Mayconoliveira\\SimpleResponse\\Tests\\" : "tests/"
+    }
+  }
+}
