@@ -1,61 +1,31 @@
-<br><br><p align="center"><a target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvIvhVFy1MDmQuS45t5y_w2SAYaFaM84SU0fTVYUMZPY3tsBcxLtodacf7iulwWFTK9xU&usqp=CAU" width="300" alt="Loja Leiturinha"></a></p><br>
-
 ## About
+This is a simple project with the proposition to be a lib for apis and easy to develop.
+Principal use in your Laravel Project
 
--
+### To use in your project:
 
-### Requirements:
+First needed to install the library, run follow command:
+- `composer require mayconoliveira/simple-response`
 
-- [PHP >= 7.3](https://www.php.net/);
-- [Docker](https://www.docker.com/) and [Docker-Compose](https://docs.docker.com/compose/);
-- [Composer](https://getcomposer.org/download/);
+## To use in your Laravel Project, follow steps:
 
-### Standards:
+on `App\Http\Controllers\Controller`;
 
-- [PHP - PSR-12](https://www.php-fig.org/psr/psr-12/);
-- [Conventional Commits](https://www.conventionalcommits.org/);
+Insert in your constructor this code
 
-## Let's get started!
+    protected $response;
 
-After completing all requirements, you can navigate to your application directory and run the following commands on your terminal:
+    public function __construct()
+    {
+        $this->response = new ApiResponse();
+    }
 
-- `composer install`
-- `cp .env.example .env`
-- `php artisan key:generate`
-- `php artisan jwt:secret`
+After this All Your controllers with extends Controller can access ApiResponse methods 
 
-_After that, you should register your personal keys on the **.env** file._
-
-### To build the project, you may run the following command:
-
-This project was built using the Lumen framework, so to run it locally, you may run the following command:
-
-* `docker-compose up -d`
-
-Now do you have two new containers running...
-* `nft_app`
-* `nft_db`
-
-If this is your first try at this project, you should do this:
-
-- Run on your project folder terminal the following command: `docker exec -it nft_app bash`;
-
-- And then, inside the application container, run `php artisan migrate`;
-
-## API Documentation
-
-To apply the changes made to the controller notations, run the command `composer docs`.
-After that can you go to url `http://localhost/api/documentation`
-
-Maybe the error 'Failed to load API definition' appears in the /documentation route. To solve it, you need to grant write permission to the storage/api-docs/ directory.
-
-Run the command: `chmod -R 777 storage/api-docs/`
-
-## Running Tests
-To run tests, execute same the follow commands in the bash terminal.
-* `composer test`  or
-* `composer testdox`  or
-* `vendor/bin/phpunit --testdox`
-
-
-## Good luck and have fun :)
+    class ExampleController extends Controller
+    {
+        public function example()
+        {
+            return $this->response->successResponse('data');
+        }
+    }
