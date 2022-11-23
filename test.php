@@ -1,7 +1,7 @@
 <?php
 
 require __DIR__ . '/vendor/autoload.php';
-use Mayconoliveira\SimpleResponse\ApiResponse;
+use Playkids\ApiResponse\ApiResponse;
 
 $apiResponse = new ApiResponse();
 $response = $apiResponse->successResponse(['Hello World']);

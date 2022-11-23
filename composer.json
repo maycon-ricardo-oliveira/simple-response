@@ -1,12 +1,12 @@
 {
-  "name": "maycon-oliveira/simple-response",
+  "name": "playkids/api-response",
   "description": "Simple Api Response Library",
   "type": "library",
   "license": "MIT",
   "authors": [
     {
       "name": "Maycon Oliveira",
-      "email": "contato.maycon.ricardo@gmail.com"
+      "email": "maycon.oliveira@playkids.com"
     }
   ],
   "minimum-stability": "stable",
@@ -17,8 +17,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Mayconoliveira\\SimpleResponse\\" : "src/",
-      "Mayconoliveira\\SimpleResponse\\Tests\\" : "tests/"
+      "Playkids\\ApiResponse\\" : "src/",
+      "Playkids\\ApiResponse\\Tests\\" : "tests/"
     }
   }
 }

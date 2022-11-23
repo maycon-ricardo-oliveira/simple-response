@@ -1,8 +1,8 @@
 <?php
 
-namespace Mayconoliveira\SimpleResponse\Tests;
+namespace Playkids\ApiResponse\Tests;
 
-use Mayconoliveira\SimpleResponse\ApiResponse;
+use Playkids\ApiResponse\ApiResponse;
 
 class ApiResponseTest extends TestCase
 {

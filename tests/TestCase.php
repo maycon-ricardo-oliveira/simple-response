@@ -1,6 +1,6 @@
 <?php
 
-namespace Mayconoliveira\SimpleResponse\Tests;
+namespace Playkids\ApiResponse\Tests;
 
 use Illuminate\Contracts\Foundation\Application;
 use PHPUnit\Framework\TestCase as BaseTestCase;

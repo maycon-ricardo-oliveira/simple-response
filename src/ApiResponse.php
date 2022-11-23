@@ -1,6 +1,6 @@
 <?php
 
-namespace Mayconoliveira\SimpleResponse;
+namespace Playkids\ApiResponse;
 
 use Illuminate\Http\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
